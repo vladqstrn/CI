@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vladqq/CI
+      run: docker build . --file Dockerfile --tag vladqq/ci
     - name: Push the Dokcer image  
-      run: docker login -u vladqq -p ${{ secrets.DOCKER_TOKEN }} && docker push vladqq/CI
+      run: docker login -u vladqq -p ${{ secrets.DOCKER_TOKEN }} && docker push vladqq/ci
