@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  my_mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      "MONGO_INITDB_ROOT_USERNAME": "mongoadmin" 
+      "MONGO_INITDB_ROOT_PASSWORD": "secret"
+
+  my_app:
+    build: .
+    environment:
+      "MONGO_CONNECTION_URL": "mongodb://mongoadmin:secret@host.docker.internal:27017/"
+    depends_on:
+      - my_mongo
