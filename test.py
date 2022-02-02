@@ -27,7 +27,7 @@ while True:
     date = datetime.now()
     insert_res = collection.insert_one({"Name": name, "Age": age, "Stack": stack, "Sallary": sallary, "Date": date})
     cnt = collection.count_documents({})
-    log.info(f"Counter value is {cnt}")
-    log.info(f"insert ack is {insert_res.acknowledged}")
+    log.info(f"Counter value is: {cnt}")
+    log.info(f"insert ack is: {insert_res.acknowledged}")
     sleep(15)
     
