@@ -1,3 +1,4 @@
 #!/bin/bash
 cd /home/ubuntu/mongo
-docker-compose up
+sudo chmod +x run.sh
+sudo docker-compose up
