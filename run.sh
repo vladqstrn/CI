@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ubuntu/mongo
-sudo chmod +x run.sh
+sudo dcoker-compose up -d
